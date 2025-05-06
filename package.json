@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://HuslT1me.github.io/FDL",
+  "homepage": "https://HuslT1me.github.io/fdl",
   "scripts": {
     "start": "vite",
     "build": "vite build",
