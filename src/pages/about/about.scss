@@ -1,0 +1,66 @@
+@use '/src/styles/helpers' as *;
+
+.about {
+  background-color: var(--color-blue-15);
+  padding-right: 0;
+  overflow: hidden;
+
+  @include mobile-above {
+    padding-bottom: rem(108);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(40);
+    margin-left: auto;
+
+    @include w-full(var(--section-right-width));
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile-above {
+      padding-left: rem(20);
+    }
+  }
+
+  &__blog {
+    max-width: rem(734);
+
+    @include mobile {
+      padding-inline: rem(20);
+    }
+  }
+
+  &__title-blog {
+    margin-bottom: rem(98);
+
+    @include mobile {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__cover {
+    position: relative;
+    flex: none;
+
+    &-image {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::after {
+      @include mobile-above {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        background: url(/assets/images/about/about_decor-lines.svg) center / contain;
+        width: rem(148);
+        height: 100%;
+        content: '';
+      }
+    }
+  }
+}

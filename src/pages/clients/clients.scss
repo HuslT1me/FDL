@@ -1,0 +1,93 @@
+@use '/src/styles/helpers' as *;
+
+.clients {
+  margin-bottom: var(--margin-section);
+
+  @include mobile {
+    --margin-section: #{rem(40)};
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    
+    @include tablet {
+      align-items: start;
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
+
+  &__slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slider {
+    &-inner {
+      align-items: center;
+      margin-left: rem(-58);
+      padding-left: 0;
+    }
+
+    &-slide {
+      display: flex;
+      flex-shrink: 0;
+      // filter: grayscale(1);
+      margin-left: rem(58);
+      width: auto;
+    }
+
+    &-button-wrapper {
+      display: none;
+    }
+
+    &-image {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__slider.swiper {
+    margin-left: rem(60);
+    padding-left: 0;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: rem(76);
+    justify-content: end;
+
+    @include tablet {
+      row-gap: rem(40);
+      flex-direction: column;
+    }
+
+    &-text {
+      @include mobile {
+        padding-inline: rem(20);
+      }
+
+      h3 {
+        font-weight: 800;
+        font-size: fluid(44, 30);
+      }
+
+      p {
+        margin-left: auto;
+
+        @include w-full(rem(659));
+      }
+
+      @include w-full(rem(735));
+    }
+
+    &-image {
+      flex: none;
+
+      @include tablet-above {
+        align-self: end;
+      }
+    }
+  }
+}

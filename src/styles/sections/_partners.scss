@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.partners {
+  margin-bottom: var(--margin-section);
+
+  @include mobile {
+    --margin-section: #{rem(40)};
+  }
+}

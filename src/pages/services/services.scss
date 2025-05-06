@@ -1,0 +1,133 @@
+@use '/src/styles/helpers' as *;
+
+.services {
+  &__inner {
+    flex-direction: column;
+    justify-content: stretch;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include tablet {
+      padding-right: rem(20);
+    }
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    column-gap: rem(62);
+    align-items: baseline;
+    margin-bottom: rem(70);
+
+    @include tablet {
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
+
+  &__slider {
+    margin: 0;
+    overflow: visible;
+
+    @include w-full(rem(839));
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: rem(-200);
+      z-index: 10;
+      box-shadow: 3px -6px 20px 20px var(--color-light);
+      background-color: var(--color-light);
+      width: 100px;
+      height: 100%;
+      content: '';
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      max-width: rem(556);
+      overflow: hidden;
+    }
+
+    &-container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &-slide {
+      width: 100% !important;
+      max-width: rem(273);
+    }
+  }
+
+  &__slider-button-wrapper {
+    right: rem(-175);
+    z-index: 10;
+
+    @include abs-y;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__blog {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(40);
+    margin-left: auto;
+    padding-right: 0;
+
+    @include w-full(rem(1319));
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile-above {
+      padding-left: rem(40);
+    }
+
+    &-text {
+      padding-left: rem(75);
+
+      @include mobile {
+        padding-inline: rem(62) rem(20);
+      }
+
+      &-inner {
+        margin-bottom: rem(50);
+        border-bottom: rem(1) solid var(--color-gray-25);
+        padding-bottom: rem(50);
+
+        @include mobile {
+          margin-bottom: rem(25);
+          padding-bottom: rem(25);
+        }
+      }
+    }
+
+    &-warning-block {
+      display: flex;
+      column-gap: rem(16);
+      align-items: center;
+      color: var(--color-red);
+    }
+
+    &-cover {
+      flex: none;
+    }
+  }
+
+  &__icon-wrapper {
+    border: rem(1) solid currentColor;
+    border-radius: 50%;
+
+    @include flex-center;
+    @include square(rem(32));
+  }
+}

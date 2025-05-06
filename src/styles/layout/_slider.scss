@@ -1,0 +1,97 @@
+@use '../helpers' as *;
+
+.partners__slider.swiper,
+.clients__slider.swiper {
+  padding-left: rem(28);
+}
+
+.partners__slider,
+.clients__slider {
+  &-list {
+    align-items: center;
+    margin-left: rem(-94);
+    padding-left: 0;
+    width: 100%;
+    max-width: rem(1120);
+
+    &-item.swiper-slide {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: start;
+      align-items: center;
+      opacity: 0.5;
+      filter: grayscale(1);
+      margin-left: rem(94);
+      width: auto;
+
+      @include hover {
+        opacity: 1;
+        filter: none;
+        transition: var(--transition-duration);
+      }
+    }
+
+    &-item--active.swiper-slide {
+      opacity: 1;
+      filter: none;
+    }
+  }
+
+  &-button-wrapper {
+    display: inline-block;
+    right: rem(8);
+    z-index: 10;
+
+    @include abs-y;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.slider {
+  &-button {
+    position: relative;
+    flex: none;
+    rotate: 45deg;
+    border: rem(1) solid var(--color-accent);
+    background-color: var(--color-light);
+    width: 100%;
+    height: 100%;
+    color: var(--color-accent);
+
+    @include square(rem(28));
+
+    @include hover {
+      border-color: var(--color-blue-80);
+      color: var(--color-blue-80);
+    }
+
+    &--prev {
+      rotate: -135deg;
+    }
+  }
+}
+
+.swiper {
+  &-button-disabled {
+    opacity: 0.6;
+  }
+
+  &-pagination-bullet {
+    rotate: 45deg;
+    opacity: 0.6;
+    margin-inline: rem(4);
+    border-radius: 0;
+    background-color: var(--color-accent);
+
+    @include square(7px);
+
+    &-active {
+      opacity: 1;
+    }
+  }
+}
+
+// навести тут порядок

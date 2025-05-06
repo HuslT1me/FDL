@@ -1,0 +1,47 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000;
+
+  --color-accent: #0a286b;
+
+  --color-blue-15: #eef9ff;
+  --color-blue-20: #e7f7ff;
+  --color-blue-60: #cff4fd;
+  --color-blue-70: #8ed8f8;
+  --color-blue-80: #00b8d4;
+
+  --color-gray-25: #dddddd;
+  --color-gray-30: #cecece;
+  --color-gray-35: #cbcbcb;
+  --color-gray-40: #afafaf;
+  --color-gray-45: #a7afb3;
+  --color-gray-50: #999999;
+  --color-gray-60: #696969;
+  --color-gray-80: #555555;
+
+  --color-red: #ee4545;
+
+  --font-family-base: 'Manrope', sans-serif;
+  --font-family-accent: 'ProximaNova', sans-serif;
+
+  --container-lg-width: #{rem(1408)};
+  --container-width: #{rem(1230)};
+  --container-padding-x: #{rem(20)};
+
+  --margin-section: #{rem(100)};
+
+  --tracking-main-title: 0.04rem;
+  --tracking-base: 0.07rem;
+
+  --rounded-base: #{rem(5)};
+
+  --section-right-width: #{rem(1339)};
+
+  --button-height: #{rem(37)};
+  --buton-height-md: #{rem(47)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-long: 0.4s;
+}

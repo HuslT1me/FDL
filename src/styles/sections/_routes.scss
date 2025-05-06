@@ -1,0 +1,131 @@
+@use '../helpers' as *;
+
+.routes {
+  &__inner {
+    background: url('/assets/images/hero-bg.webp') center/cover no-repeat;
+    color: var(--color-light);
+
+    @include mobile {
+      min-height: rem(536);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(31);
+
+    @include tablet {
+      margin-bottom: rem(45);
+    }
+  }
+
+  &__header {
+    display: flex;
+    column-gap: rem(40);
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: rem(48);
+
+    @include w-full(rem(811));
+
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__running-line {
+    position: relative;
+    margin-bottom: rem(72);
+    overflow: hidden;
+
+    &-top,
+    &-bottom {
+      display: flex;
+      column-gap: rem(58);
+      align-items: baseline;
+      will-change: transform;
+      width: max-content;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    &-top {
+      animation: running-line-left 20s infinite linear;
+    }
+
+    &-bottom {
+      animation: running-line-right 20s infinite linear;
+    }
+
+    @keyframes running-line-left {
+      100% {
+        transform: translateX(0);
+      }
+      0% {
+        transform: translateX(-51%);
+      }
+    }
+
+    @keyframes running-line-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-51%);
+      }
+    }
+
+    &-item-lg {
+      font-weight: 800;
+      font-size: fluid(120, 80);
+    }
+
+    &-item-md {
+      color: var(--color-blue-70);
+      font-weight: 800;
+      font-size: fluid(100, 60);
+    }
+
+    &-item-sm {
+      color: var(--color-blue-80);
+      font-weight: 800;
+      font-size: fluid(70, 40);
+      line-height: 1;
+    }
+  }
+
+  &__description-wrapper {
+    display: flex;
+    column-gap: rem(25);
+    align-items: center;
+    line-height: 2;
+
+    @include mobile {
+      align-items: start;
+      align-self: center;
+      padding-left: rem(26);
+    }
+
+    p {
+      max-width: rem(451);
+    }
+  }
+
+  &__button-wrapper {
+    padding-bottom: rem(80);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__calculate-button {
+    margin-inline: auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .routes__inner {
+    background: url('/assets/images/hero-bg-2x.webp') center/cover no-repeat;
+  }
+}

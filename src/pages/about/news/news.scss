@@ -1,0 +1,41 @@
+@use '/src/styles/helpers' as *;
+
+.news {
+  padding-bottom: 0;
+
+  &__slider {
+    padding-bottom: rem(140);
+
+    @include mobile {
+      padding-bottom: rem(60);
+    }
+
+    &-button-wrapper {
+      display: none;
+
+      @include mobile-above {
+        display: flex;
+        position: absolute;
+        right: rem(6);
+        bottom: rem(57);
+        column-gap: rem(19);
+      }
+    }
+
+    &-button-prev,
+    &-button-next {
+      background-color: var(--color-blue-15);
+    }
+  }
+
+  &__pagination-list {
+    display: flex;
+    position: static;
+    column-gap: rem(4);
+    align-items: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

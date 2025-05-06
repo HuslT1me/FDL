@@ -1,0 +1,63 @@
+@use '/src/styles/helpers' as *;
+
+.hero {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('/assets/images/hero-bg.webp') center/cover no-repeat;
+    min-height: 100vh;
+
+    @include mobile {
+      min-height: 100%;
+    }
+  }
+
+  &__information-block {
+    display: flex;
+    justify-content: space-between;
+    padding-block: rem(84) rem(40);
+
+    @include tablet {
+      flex-direction: column;
+      padding-block: clamp(2rem, -7.75rem + 20.3125vw, 5.25rem) rem(60);
+    }
+  }
+
+  &__title {
+    @include w-full(rem(735));
+  }
+
+  &__details {
+    display: flex;
+    row-gap: rem(36);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__description {
+    display: flex;
+    row-gap: rem(50);
+    flex-direction: column;
+    margin-top: rem(14);
+    color: var(--color-light);
+    line-height: rem(30);
+
+    @include w-full(rem(350));
+  }
+
+  &__image-decoration {
+    width: 100%;
+
+    @include mobile {
+      height: rem(218);
+      object-fit: cover;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__inner {
+    background: url('/assets/images/hero-bg-2x.webp') center/cover no-repeat;
+  }
+}

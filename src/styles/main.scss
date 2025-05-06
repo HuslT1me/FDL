@@ -1,0 +1,16 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use './choices/_choices.scss';
+
+@use './layout/header';
+@use './layout/footer';
+@use './layout/slider';
+
+@use './sections/services';
+@use './sections/routes';
+@use './sections/partners';
+@use './sections/news';

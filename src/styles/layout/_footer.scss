@@ -1,0 +1,138 @@
+@use '../helpers' as *;
+
+.footer {
+  &__inner {
+    display: flex;
+    column-gap: rem(20);
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: rem(23);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    column-gap: rem(21);
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__logo-link {
+    @include mobile {
+      flex: none;
+    }
+  }
+
+  &__decor-line {
+    margin-block: rem(20) 0;
+    background-color: var(--color-accent);
+    width: 100%;
+    height: rem(1);
+
+    @include mobile-above {
+      display: none;
+    }
+  }
+
+  &__main-content {
+    @include w-full(rem(1048));
+
+    &-top {
+      display: grid;
+      grid-template-columns: 1fr minmax(rem(405), auto) 1fr;
+      column-gap: rem(20);
+      align-items: center;
+      border-top: rem(1) solid var(--color-accent);
+      padding-block: rem(35);
+      text-transform: uppercase;
+
+      @include mobile {
+        grid-template-columns: auto 1fr;
+        border-top: none;
+      }
+    }
+
+    &-bottom {
+      display: grid;
+      grid-template-columns: 1fr minmax(rem(405), auto) 1fr;
+      justify-items: end;
+      border-top: rem(1) solid var(--color-gray-25);
+      border-bottom: rem(1) solid var(--color-gray-25);
+      padding-block: rem(26);
+      color: var(--color-gray-60);
+
+      @include mobile {
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+      }
+    }
+  }
+
+  &__navigation {
+    color: var(--color-dark);
+
+    &--mobile {
+      display: none;
+      text-transform: uppercase;
+
+      @include mobile {
+        display: block;
+      }
+    }
+
+    &-list {
+      flex-direction: row;
+
+      @include mobile {
+        row-gap: rem(21);
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__bottom-inner {
+    display: flex;
+    row-gap: rem(31);
+    flex-direction: column;
+
+    @include mobile-above {
+      display: contents;
+    }
+  }
+
+  &__tracking-wrapper {
+    text-align: end;
+  }
+
+  &__copyright {
+    font-size: rem(14);
+    text-transform: none;
+  }
+
+  &__location-info {
+    display: flex;
+    column-gap: rem(21);
+    grid-column-start: 2;
+    width: 100%;
+    font-size: rem(13);
+  }
+
+  &__address {
+    display: flex;
+    column-gap: rem(21);
+    align-items: start;
+    font-size: rem(13);
+
+    &-date {
+      display: flex;
+      row-gap: rem(9);
+      flex-direction: column;
+      line-height: 1;
+    }
+  }
+}
