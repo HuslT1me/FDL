@@ -5398,9 +5398,25 @@
   return Choices;
 });
 
-const customSelect = () => {
-  const element = document.querySelector('.js-choice');
-  const choices = new Choices(element);
-};
+const rootSelector = '[data-js-select-custom]';
 
-export default customSelect;
+class CustomSelect {
+  constructor(rootElement) {
+    this.rootElement = rootElement;
+    this.selectElement = document.querySelector(this.rootElement);
+  }
+}
+
+class SelectCollection {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    document.querySelectorAll(rootSelector).forEach((element) => {
+      new Choices(element);
+    });
+  }
+}
+
+export default SelectCollection;

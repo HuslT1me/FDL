@@ -1,9 +1,17 @@
 @use '../helpers' as *;
 
 .partners {
-  margin-bottom: var(--margin-section);
+  &__bg-block {
+    --aboutPaddingBottom: #{rem(85)};
 
-  @include mobile {
-    --margin-section: #{rem(40)};
+    padding-bottom: var(--aboutPaddingBottom);
+
+    @include mobile {
+      --aboutPaddingBottom: #{rem(40)};
+    }
+
+    &--gray {
+      background-color: var(--color-ligh-alt);
+    }
   }
 }

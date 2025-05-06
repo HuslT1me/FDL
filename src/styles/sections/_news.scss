@@ -1,13 +1,9 @@
 @use '../helpers' as *;
 
 .news {
-  margin-bottom: var(--margin-section);
-  background-color: var(--color-blue-15);
-  padding-bottom: rem(84);
-
-  @include mobile {
-    padding-bottom: rem(23);
-    --margin-section: #{rem(40)};
+  &__bg-block {
+    background-color: var(--color-blue-15);
+    padding-bottom: rem(84);
   }
 
   &__inner {

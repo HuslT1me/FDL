@@ -20,7 +20,7 @@
 
   &__description-wrapper {
     display: flex;
-    row-gap: rem(108);
+    row-gap: rem(97);
     flex-direction: column;
     padding-bottom: rem(45);
 
@@ -35,7 +35,7 @@
 
   &__description {
     position: relative;
-    padding-left: rem(80);
+    padding-left: rem(77);
     line-height: rem(30);
 
     @include w-full(rem(461));

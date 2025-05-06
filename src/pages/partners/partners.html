@@ -13,19 +13,19 @@
             <nav class="header__navigation">
               <ul class="header__navigation-list navigation-list">
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">about</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/about/about.html">about</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">services</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/services/services.html">services</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">clients</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/clients/clients.html">clients</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">partners</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/partners/partners.html">partners</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">contacts</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/contacts/contacts.html">contacts</a>
                 </li>
               </ul>
               <a class="header__tracking-link header__tracking-link--mobile tracking-link" href="#">
@@ -53,7 +53,7 @@
           </button>
         </div>
         <div class="header__logo-wrapper">
-          <a class="header__logo-link" href="#">
+          <a class="header__logo-link" href="/fdl/index.html">
             <img class="header__logo-image" src="/logo.svg" width="159" height="77" alt="" loading="lazy" />
           </a>
         </div>
@@ -219,7 +219,7 @@
               </div>
             </div>
           </div>
-          <div class="container container--lg mobile-contents">
+          <div class="container-lg mobile-contents">
             <div class="partners__content">
               <div class="partners__content-text">
                 <h3>Moro International</h3>
@@ -249,51 +249,71 @@
         </div>
       </section>
       <section class="routes" aria-labelledby="routes-title">
-        <div class="container container--lg mobile-contents">
-          <div class="routes__inner">
-            <div class="container">
-              <header class="routes__header">
-                <h3 class="routes__title section-title h3">Our routes</h3>
-                <div class="routes__description-wrapper">
-                  <svg class="icon icon--globe" width="48" height="47">
-                    <use href="/assets/icons/sprite.svg#globe"></use>
-                  </svg>
-                  <p>Our transportation routes cover nearly all continents and provide safe and optimal logistics solutions for our clients.</p>
+        <div class="container-full-screen mobile-contents">
+          <div class="routes__bg-block">
+            <div class="container-lg">
+              <div class="routes__inner">
+                <div class="container mobile-contents">
+                  <header class="routes__header">
+                    <h3 class="routes__title section-title h3">Our routes</h3>
+                    <div class="routes__description-wrapper">
+                      <svg class="icon icon--globe" width="48" height="47">
+                        <use href="/assets/icons/sprite.svg#globe"></use>
+                      </svg>
+                      <p>Our transportation routes cover nearly all continents and provide safe and optimal logistics solutions for our clients.</p>
+                    </div>
+                  </header>
                 </div>
-              </header>
-            </div>
-            <div class="routes__running-line">
-              <div class="routes__running-line-top">
-                <span class="routes__running-line-item-md">Middle East</span>
-                <span class="routes__running-line-item-sm">Southeast Asia</span>
-                <span class="routes__running-line-item-lg">Africa</span>
+                <div class="routes__running-line">
+                  <div class="routes__running-line-top">
+                    <span class="routes__running-line-item-md">Middle East</span>
+                    <span class="routes__running-line-item-sm">Southeast Asia</span>
+                    <span class="routes__running-line-item-lg">Africa</span>
 
-                <span class="routes__running-line-item-md">Middle East</span>
-                <span class="routes__running-line-item-sm">Southeast Asia</span>
-                <span class="routes__running-line-item-lg">Africa</span>
-              </div>
-              <div class="routes__running-line-bottom">
-                <span class="routes__running-line-item-lg">Europe</span>
-                <span class="routes__running-line-item-md">Central Asia</span>
-                <span class="routes__running-line-item-sm">North America</span>
+                    <span class="routes__running-line-item-md">Middle East</span>
+                    <span class="routes__running-line-item-sm">Southeast Asia</span>
+                    <span class="routes__running-line-item-lg">Africa</span>
 
-                <span class="routes__running-line-item-lg">Europe</span>
-                <span class="routes__running-line-item-md">Central Asia</span>
-                <span class="routes__running-line-item-sm">North America</span>
+                    <span class="routes__running-line-item-md">Middle East</span>
+                    <span class="routes__running-line-item-sm">Southeast Asia</span>
+                    <span class="routes__running-line-item-lg">Africa</span>
+
+                    <span class="routes__running-line-item-md">Middle East</span>
+                    <span class="routes__running-line-item-sm">Southeast Asia</span>
+                    <span class="routes__running-line-item-lg">Africa</span>
+                  </div>
+                  <div class="routes__running-line-bottom">
+                    <span class="routes__running-line-item-lg">Russia</span>
+                    <span class="routes__running-line-item-md">Central Asia</span>
+                    <span class="routes__running-line-item-sm">North America</span>
+
+                    <span class="routes__running-line-item-lg">Russia</span>
+                    <span class="routes__running-line-item-md">Central Asia</span>
+                    <span class="routes__running-line-item-sm">North America</span>
+                    
+                    <span class="routes__running-line-item-lg">Russia</span>
+                    <span class="routes__running-line-item-md">Central Asia</span>
+                    <span class="routes__running-line-item-sm">North America</span>
+
+                    <span class="routes__running-line-item-lg">Russia</span>
+                    <span class="routes__running-line-item-md">Central Asia</span>
+                    <span class="routes__running-line-item-sm">North America</span>
+                  </div>
+                </div>
+                <div class="routes__button-wrapper">
+                  <button
+                    class="routes__calculate-button button button--white"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-controls="myModal"
+                    aria-expanded="false"
+                    aria-label="Open calculate delivery"
+                    data-js-modal-trigger
+                  >
+                    calculate delivery
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="routes__button-wrapper">
-              <button
-                class="routes__calculate-button button button--white"
-                type="button"
-                aria-haspopup="dialog"
-                aria-controls="myModal"
-                aria-expanded="false"
-                aria-label="Open calculate delivery"
-                data-js-modal-trigger
-              >
-                calculate delivery
-              </button>
             </div>
           </div>
         </div>
@@ -397,19 +417,19 @@
             <nav class="footer__navigation hidden-mobile">
               <ul class="footer__navigation-list navigation-list">
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">about</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/about/about.html">about</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">services</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/services/services.html">services</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">clients</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/clients/clients.html">clients</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">partners</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/partners/partners.html">partners</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">contacts</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/contacts/contacts.html">contacts</a>
                 </li>
               </ul>
             </nav>
@@ -426,19 +446,19 @@
             <nav class="footer__navigation footer__navigation--mobile">
               <ul class="footer__navigation-list navigation-list">
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">about</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/about/about.html">about</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">services</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/services/services.html">services</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">clients</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/clients/clients.html">clients</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">partners</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/partners/partners.html">partners</a>
                 </li>
                 <li class="navigation-list__item">
-                  <a class="navigation-list__link" href="#">contacts</a>
+                  <a class="navigation-list__link" href="/fdl/src/pages/contacts/contacts.html">contacts</a>
                 </li>
               </ul>
             </nav>
@@ -488,7 +508,7 @@
                 <label class="calculate-delivery__label" for="type"> Cargo Type </label>
                 <input class="calculate-delivery__input" type="text" id="type" />
                 <label for="delivery">Delivery</label>
-                <select class="calculate-delivery__select" id="delivery">
+                <select class="calculate-delivery__select js-choice" data-js-select-custom id="delivery">
                   <option value="By Sea">By Sea</option>
                   <option value="By Air">By Air</option>
                   <option value="By Train">By Train</option>

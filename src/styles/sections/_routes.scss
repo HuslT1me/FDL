@@ -1,13 +1,17 @@
 @use '../helpers' as *;
 
 .routes {
-  &__inner {
+  &__bg-block {
     background: url('/assets/images/hero-bg.webp') center/cover no-repeat;
-    color: var(--color-light);
+    overflow: hidden;
 
     @include mobile {
       min-height: rem(536);
     }
+  }
+
+  &__inner {
+    color: var(--color-light);
   }
 
   &__title {
@@ -36,7 +40,6 @@
   &__running-line {
     position: relative;
     margin-bottom: rem(72);
-    overflow: hidden;
 
     &-top,
     &-bottom {
@@ -125,7 +128,7 @@
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .routes__inner {
+  .routes__bg-block {
     background: url('/assets/images/hero-bg-2x.webp') center/cover no-repeat;
   }
 }

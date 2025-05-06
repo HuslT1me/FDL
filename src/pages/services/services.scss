@@ -17,7 +17,7 @@
     display: flex;
     column-gap: rem(62);
     align-items: baseline;
-    margin-bottom: rem(70);
+    margin-bottom: rem(46);
 
     @include tablet {
       flex-direction: column;
@@ -89,18 +89,18 @@
     }
 
     @include mobile-above {
-      padding-left: rem(40);
+      padding-left: rem(20);
     }
 
     &-text {
-      padding-left: rem(75);
+      padding-left: rem(61);
 
       @include mobile {
         padding-inline: rem(62) rem(20);
       }
 
       &-inner {
-        margin-bottom: rem(50);
+        margin-bottom: rem(29);
         border-bottom: rem(1) solid var(--color-gray-25);
         padding-bottom: rem(50);
 
@@ -120,6 +120,10 @@
 
     &-cover {
       flex: none;
+
+      @include tablet-above {
+        margin-top: rem(13);
+      }
     }
   }
 

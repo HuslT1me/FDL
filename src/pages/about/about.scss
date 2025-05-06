@@ -1,12 +1,17 @@
 @use '/src/styles/helpers' as *;
 
 .about {
-  background-color: var(--color-blue-15);
-  padding-right: 0;
-  overflow: hidden;
+  &__bg-block {
+    background-color: var(--color-blue-15);
+    padding-right: 0;
+  }
 
-  @include mobile-above {
-    padding-bottom: rem(108);
+  &__inner-wrapper {
+    overflow: hidden;
+
+    @include mobile-above {
+      padding-bottom: rem(108);
+    }
   }
 
   &__inner {
@@ -32,10 +37,18 @@
     @include mobile {
       padding-inline: rem(20);
     }
+
+    &-inner {
+      padding-left: rem(78);
+
+      @include mobile {
+        padding-left: rem(55);
+      }
+    }
   }
 
   &__title-blog {
-    margin-bottom: rem(98);
+    margin-bottom: rem(80);
 
     @include mobile {
       margin-bottom: rem(40);
