@@ -89,6 +89,7 @@ a {
 
 :focus-visible {
   transition-duration: 0s !important;
-  outline: rem(2) dashed var(--color-dark);
+  // outline: rem(2) dashed var(--color-dark);
+  outline: rem(2) dashed transparent;
   outline-offset: rem(4);
 }
