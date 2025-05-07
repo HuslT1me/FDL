@@ -1,9 +1,24 @@
 @use '/src/styles/helpers' as *;
 
 .about {
+  overflow: hidden;
+
   &__bg-block {
-    background-color: var(--color-blue-15);
+    display: inline-flex;
     padding-right: 0;
+
+    @include laptop-above {
+      margin-left: calc((100vw - 40px - rem(1230)) / 2);
+    }
+
+    @include tablet-above {
+      column-gap: rem(76);
+    }
+
+    @include tablet {
+      flex-direction: column;
+      background: var(--color-blue-15);
+    }
   }
 
   &__inner-wrapper {
@@ -11,6 +26,17 @@
 
     @include mobile-above {
       padding-bottom: rem(108);
+    }
+  }
+
+  .container-full-screen {
+    margin-inline: auto;
+    background-color: var(--color-blue-15);
+    padding: 0;
+    max-width: calc(100vw - 40px);
+
+    @include tablet {
+      max-width: 100%;
     }
   }
 
@@ -27,14 +53,15 @@
     }
 
     @include mobile-above {
-      padding-left: rem(20);
+      // padding-left: rem(20);
     }
   }
 
   &__blog {
     max-width: rem(734);
 
-    @include mobile {
+    @include tablet {
+      margin-bottom: rem(40);
       padding-inline: rem(20);
     }
 
@@ -59,15 +86,22 @@
     position: relative;
     flex: none;
 
+    @include laptop-above {
+      width: calc(420px + (100vw - 1230px) / 2);
+    }
+
     &-image {
       position: relative;
       z-index: 10;
+
+      @include tablet-above {
+        width: 100%;
+      }
     }
 
     &::after {
       @include mobile-above {
         position: absolute;
-        top: 40%;
         left: 0;
         background: url(/assets/images/about/about_decor-lines.svg) center / contain;
         width: rem(148);
