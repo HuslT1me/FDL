@@ -7,6 +7,10 @@
 
 .partners__slider,
 .clients__slider {
+  @include mobile-s {
+    overflow: visible !important;
+  }
+
   &-list {
     align-items: center;
     margin-left: rem(-94);

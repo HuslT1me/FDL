@@ -106,19 +106,17 @@ $choices-z-index: 1 !default;
     position: absolute;
     top: 50%;
     right: 11.5px;
-    margin-top: -2.5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: $choices-text-color transparent transparent transparent;
-    width: 0;
-    height: 0;
+    margin-top: rem(-8);
+    background: url('/assets/icons/arrow-select.svg') center/contain no-repeat;
+    width: rem(8);
+    height: rem(12);
     pointer-events: none;
     content: '';
   }
 
   &.is-open::after {
-    margin-top: -7.5px;
-    border-color: transparent transparent $choices-text-color;
+    rotate: 180deg;
+    transition: var(--transition-duration);
   }
 
   &[dir='rtl'] {
@@ -257,6 +255,8 @@ $choices-z-index: 1 !default;
   position: absolute;
   top: 100%;
   z-index: $choices-z-index;
+  transition: var(--transition-duration);
+  transition-behavior: allow-discrete;
   margin-top: -1px;
   border: 1px solid $choices-keyline-color;
   border-bottom-right-radius: $choices-border-radius;
@@ -266,8 +266,20 @@ $choices-z-index: 1 !default;
   overflow: hidden;
   word-break: break-all;
 
+  @mixin starting-styles {
+    opacity: 0;
+  }
+
   &.is-active {
     display: block;
+
+    @starting-style {
+      @include starting-styles;
+    }
+  }
+
+  & {
+   opacity: 1;
   }
 
   .is-open & {

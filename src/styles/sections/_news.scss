@@ -4,6 +4,10 @@
   &__bg-block {
     background-color: var(--color-blue-15);
     padding-bottom: rem(84);
+
+    @include mobile {
+      padding-bottom: rem(40);
+    }
   }
 
   &__inner {

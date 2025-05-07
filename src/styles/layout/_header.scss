@@ -32,6 +32,8 @@
 
   &__overlay-menu-dialog {
     position: fixed;
+    transition: var(--transition-duration);
+    transition-behavior: allow-discrete;
     inset: rem(200) 0 0;
     border: none;
     padding: var(--container-padding-x);
@@ -46,8 +48,21 @@
       inset: rem(165) 0 0;
     }
 
+    @mixin starting-styles {
+      translate: 50%;
+      opacity: 0;
+    }
+
     &[open] {
       display: flex;
+
+      @starting-style {
+        @include starting-styles;
+      }
+    }
+
+    &:not([open]) {
+      @include starting-styles;
     }
 
     .container {
@@ -95,8 +110,8 @@
     &-list {
       @include mobile {
         row-gap: rem(18);
-        width: auto;
         padding-left: rem(20);
+        width: auto;
       }
     }
   }
