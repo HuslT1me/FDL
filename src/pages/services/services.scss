@@ -39,7 +39,7 @@
       z-index: 10;
       box-shadow: 3px -6px 20px 20px var(--color-light);
       background-color: var(--color-light);
-      width: 100px;
+      width: rem(120);
       height: 100%;
       content: '';
 
@@ -65,12 +65,12 @@
   }
 
   &__slider-button-wrapper {
-    right: rem(-175);
+    right: rem(-170);
     z-index: 10;
 
     @include abs-y;
 
-    @include tablet {
+    @include laptop {
       display: none;
     }
   }

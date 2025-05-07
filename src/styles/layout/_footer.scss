@@ -49,7 +49,6 @@
       align-items: center;
       border-top: rem(1) solid var(--color-accent);
       padding-block: rem(35);
-      text-transform: uppercase;
 
       @include mobile {
         grid-template-columns: auto 1fr;
@@ -111,7 +110,6 @@
 
   &__copyright {
     font-size: rem(14);
-    text-transform: none;
   }
 
   &__location-info {

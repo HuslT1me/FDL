@@ -142,7 +142,7 @@
 
   &__additional-info {
     display: flex;
-    column-gap: clamp(1.25rem, -3.0577rem + 6.7308vw, 3rem);
+    column-gap: clamp(1.25rem, -4.5962rem + 9.1346vw, 3.625rem);
     justify-content: end;
     align-items: center;
     border-bottom: rem(1) solid var(--color-gray-25);
@@ -166,13 +166,10 @@
 
     &-link {
       color: var(--color-gray-50);
+      font-size: rem(13);
 
       &--active {
         color: var(--color-dark);
-      }
-
-      @include mobile {
-        font-size: rem(14);
       }
     }
   }

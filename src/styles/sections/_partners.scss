@@ -1,6 +1,10 @@
 @use '../helpers' as *;
 
 .partners {
+  @include mobile {
+    overflow: hidden;
+  }
+
   &__bg-block {
     --aboutPaddingBottom: #{rem(85)};
 

@@ -53,11 +53,11 @@
     }
 
     &-top {
-      animation: running-line-left 20s infinite linear;
+      animation: running-line-left 25s infinite linear;
     }
 
     &-bottom {
-      animation: running-line-right 20s infinite linear;
+      animation: running-line-right 25s infinite linear;
     }
 
     @keyframes running-line-left {
