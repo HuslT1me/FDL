@@ -52,6 +52,7 @@ const sliderOptionsMap = {
     slidesPerView: 1,
     loop: false,
     slidesPerGroup: 1,
+    customLoopDisable: true,
     pagination: {
       el: '.swiper-pagination',
     },
@@ -147,7 +148,7 @@ class Slider {
   }
 
   init() {
-    new Swiper(this.rootElement, {
+    this.swiper = new Swiper(this.rootElement, {
       ...this.params,
       modules: [Navigation, Pagination],
       navigation: {
@@ -155,9 +156,26 @@ class Slider {
         prevEl: this.prevButtonElement,
       },
     });
-  }
 
-  
+    this.handleLastSlideClick = () => {
+      setTimeout(() => {
+        this.swiper.slideTo(0);
+      }, 300);
+    };
+
+   if(!this.params.customLoopDisable) {
+    this.swiper.on('slideChange', () => {
+      this.nextButtonElement?.removeAttribute('disabled');
+      this.prevButtonElement?.removeAttribute('disabled');
+
+      this.nextButtonElement?.removeEventListener('click', this.handleLastSlideClick);
+
+      if (this.swiper.isEnd) {
+        this.nextButtonElement?.addEventListener('click', this.handleLastSlideClick);
+      }
+    });
+   }
+  }
 }
 
 class SliderCollection {

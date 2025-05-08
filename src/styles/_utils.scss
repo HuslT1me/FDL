@@ -101,8 +101,8 @@
   align-items: baseline;
   color: var(--color-dark);
   font-weight: 600;
-  line-height: 1;
   font-size: rem(14);
+  line-height: 1;
 }
 
 .learn-more-link {
@@ -466,6 +466,12 @@
 
 .mobile-contents {
   @include mobile {
+    display: contents;
+  }
+}
+
+.tablet-contents {
+  @include tablet {
     display: contents;
   }
 }

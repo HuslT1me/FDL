@@ -1,43 +1,24 @@
 @use '/src/styles/helpers' as *;
 
 .contacts {
-  &__inner {
-    display: flex;
+  &__bg-block {
     position: relative;
+    background-image: url('/assets/images/contacts/bg.webp');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--color-blue-80);
-    padding-bottom: rem(40);
     min-height: rem(651);
-
-    @include tablet-above {
-      background-image: url('/assets/images/contacts/bg.webp');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    overflow: hidden;
 
     @include tablet {
+      background-image: none;
       min-height: 100%;
     }
   }
 
-  &__location-mark {
-    position: absolute;
-    top: rem(190);
-    right: rem(290);
-    width: rem(115);
-    height: rem(125);
-    content: '';
-
-    @include tablet {
-      display: none;
-    }
-
-    &-icon {
-      width: 100%;
-    }
+  &__inner {
+    display: flex;
+    padding-bottom: rem(40);
   }
 
   &__title {
@@ -88,11 +69,5 @@
 
   &__map-link {
     margin-left: rem(81);
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contacts__inner {
-    background: url('/assets/images/contacts/bg-2x.webp') center/cover no-repeat;
   }
 }
