@@ -5,6 +5,12 @@
     overflow: hidden;
   }
 
+  &:last-child {
+    @include mobile {
+      margin-bottom: rem(60);
+    }
+  }
+
   &__bg-block {
     --aboutPaddingBottom: #{rem(85)};
 

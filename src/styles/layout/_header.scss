@@ -36,7 +36,7 @@
     transition-behavior: allow-discrete;
     inset: rem(200) 0 0;
     border: none;
-    padding: var(--container-padding-x);
+    padding: rem(30) rem(20);
     width: 100%;
     height: 100%;
 
@@ -104,6 +104,7 @@
     }
 
     @include mobile {
+      padding-right: 0;
       justify-content: space-between;
     }
 
@@ -112,6 +113,8 @@
         row-gap: rem(18);
         padding-left: rem(20);
         width: auto;
+        font-size: rem(20);
+        letter-spacing: 0.06em;
       }
     }
   }
@@ -181,6 +184,7 @@
 
     &--mobile {
       display: none;
+      margin-top: 6px;
 
       @include tablet {
         display: flex;

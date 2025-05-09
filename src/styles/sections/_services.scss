@@ -7,6 +7,12 @@
     --margin-section: #{rem(40)};
   }
 
+  &:last-child {
+    @include mobile {
+      --margin-section: #{rem(100)};
+    }
+  }
+
   &__inner {
     display: flex;
     column-gap: rem(20);
